@@ -84,14 +84,14 @@ caso precise alterar posição de itens inline, deve mudar o display para block*
   /* position absolute vai permitir um icone sobrepor um "andar", junto com z-index consigo escolher o andar */
   position: absolute;
   z-index: 1;
-  left: 0;
+  animation: slide-back 0.2s;
   top: 50%;
   transform: translateY(-50%);
 }
 
 .light #switch button {
-  right: 0;
-  left: initial;
+  left: 50%;
+  animation: slide-in 0.2s forwards;
 }
 
 #switch span {
@@ -173,5 +173,24 @@ muda a imagem de fundo ao atingir largura (width) maior que 700px*/
 
   .light {
     --bg-url: url(./assets/bg-desktop-light.jpg);
+  }
+}
+
+/*animação criada, deve ser adicionada dentro do elemento que deseja animar, com o valor animation */
+@keyframes slide-in {
+  from {
+    left: 0;
+  }
+  to {
+    left: 50%;
+  }
+}
+
+@keyframes slide-back {
+  from {
+    right: 0;
+  }
+  to {
+    right: 50%;
   }
 }
