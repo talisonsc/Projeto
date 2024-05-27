@@ -42,9 +42,11 @@ body * {
 
 /* caixa principal */
 #container {
-  width: 360px;
+  width: 100%;
+  max-width: 588px;
   margin: auto; /* se colocar duas opções, a primeira altera em cima e em baixo e a segunda nos lados */
   padding-top: 56px;
+  
 }
 
 /*profile pai permite alterar o local de itens com display inline
@@ -157,4 +159,8 @@ foster {
   font-size: 14px;
   padding: 24px 0;
   text-align: center;
+}
+
+#switch :hover {
+  border: 2px solid var(--border-color)
 }
